@@ -5,22 +5,25 @@
 //  Created by Sarah Svitlik on 2/7/25.
 //
 
+#include "params.hpp"
+#include <getopt.h>
+#include <cstring>
 
-#include <iostream>
-#include <fstream>
 
 using namespace std;
 
-class Params {
-public:
-    Params (int argc, char* argv []);
-    void print (ofstream& outStream);
-    void usage();
-    //Boolean variables for all your switches
-    //Convert argv c-string into a c++ string
+Params::Params(int argc, char* argv[]) {
     
-    //Process command line arguments using getopt_long()
-};
+    struct option longOpts[] = { //Process long switches
+        {"verbose", no_argument, NULL, 'b'},
+        {"output", required_argument, NULL, 'o'},
+        {"dir", required_argument, NULL, 'd'},
+        {"help", no_argument, NULL, 0},
+        {"ignore-case", no_argument, NULL, 'i'},
+        {NULL, 0, NULL, 0}
+    };
+    
+}
 
 /*  Process command line options
  struct option longOpts[] = { //Process long switches

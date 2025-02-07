@@ -6,12 +6,13 @@
 //
 
 #include <iostream>
+#include "params.hpp"
 
-int main(int argc, const char * argv[]) {
+int main(int argc,  char * argv[]) {
 
-    //declare instance of Param and pass argc and argv as a constructor.
-    
-    //Call Params::print() to display params
-
+   // Params params (argc, argv);
+   // params.print();
+ 
+ 
     return 0;
 }
