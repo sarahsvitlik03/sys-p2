@@ -33,6 +33,7 @@ Params::Params(int argc, char* argv[]) {
                 //case 'd':
                 //case 'o':
             case 'h': usage(); exit(0);
+            case '?': //Catch invalid switches
             default: usage(); exit(0);
                 
         }
