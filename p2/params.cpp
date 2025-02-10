@@ -40,6 +40,17 @@ Params::Params(int argc, char* argv[]) {
     }
 }
 
+void Params::usage() {
+    cout << "\nUsage: sniff [options] \"search words\" \n";
+    cout << "Options: \n";
+    cout << "  -i,  --ignore-case                Case-insenstive search.\n";
+    cout << "  -v,  --verbose                    Enables verbose output.\n";
+    cout << "  -d,  --dir <pathname>             Specify starting directory.\n";
+    cout << "  -o,  --output <filename>          Specify output file.\n";
+    cout << "  -h,  --help                       Display this usage message.\n";
+    
+}
+
 /*   
  
  cout << "Processing: " << argv[0] << endl;
