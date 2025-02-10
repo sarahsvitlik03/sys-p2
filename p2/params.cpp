@@ -25,7 +25,7 @@ Params::Params(int argc, char* argv[]) {
     
     int code, ch, optx;
     for (;;) { //Loop processes short switches
-        ch = getopt_long(argc, argv, "i:ivd:o:h", longOpts, nullptr);
+        ch = getopt_long(argc, argv, "ivd:o:h", longOpts, nullptr);
         if (ch == -1) break;
         switch (ch) {
             case 'i': ignore_case = true; break;
