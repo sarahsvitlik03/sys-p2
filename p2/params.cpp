@@ -14,7 +14,7 @@ using namespace std;
 
 Params::Params(int argc, char* argv[]) {
     
-    struct option longOpts[] = { //Process long switches
+    struct option longOpts[] = {
         {"verbose", no_argument, NULL, 'b'},
         {"output", required_argument, NULL, 'o'},
         {"dir", required_argument, NULL, 'd'},
@@ -24,7 +24,7 @@ Params::Params(int argc, char* argv[]) {
     };
     
     int code, ch, optx;
-    for (;;) { //Loop processes short switches
+    for (;;) { //Processes each switch
         ch = getopt_long(argc, argv, "ivd:o:h", longOpts, nullptr);
         if (ch == -1) break;
         switch (ch) {
@@ -38,6 +38,10 @@ Params::Params(int argc, char* argv[]) {
                 
         }
         
+    }
+    
+    if (optind < argc) {
+        search_words = argv[optind];
     }
 }
 
